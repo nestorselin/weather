@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db:
+    image: postgres:12
+    container_name: course.postgres
+    environment:
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: course
+    ports:
+      - 5434:5432
+    volumes:
+      - ~/docker-containers/course/postgres-data:/var/lib/postgresql/data
